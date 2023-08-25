@@ -1,0 +1,3 @@
+it's not the most efficient optimization approach but it could be useful for "automatic shaping airfoils" (look for real name)
+
+PROBLEM: CANNOT USE CONSTRAINTS WITH PPO AGENT
