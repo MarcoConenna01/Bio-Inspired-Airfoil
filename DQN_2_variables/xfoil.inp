@@ -1,0 +1,22 @@
+load xfoil.foil
+oper
+iter
+1000
+
+
+
+oper
+re 1.54853e+06
+mach 0.0646412
+visc
+pacc
+
+
+alfa 5
+dump xfoil_a05.000_dump.dat
+cpwr xfoil_a05.000_cpwr.dat
+pwrt
+xfoil_pwrt.dat
+plis
+
+quit

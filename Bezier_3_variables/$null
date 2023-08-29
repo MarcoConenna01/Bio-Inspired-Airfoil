@@ -1,0 +1,181 @@
+
+ ===================================================
+  XFOIL Version 6.99
+  Copyright (C) 2000   Mark Drela, Harold Youngren
+
+  This software comes with ABSOLUTELY NO WARRANTY,
+    subject to the GNU General Public License.
+
+  Caveat computor
+ ===================================================
+
+ File  xfoil.def  not found
+
+   QUIT    Exit program
+
+  .OPER    Direct operating point(s)
+  .MDES    Complex mapping design routine
+  .QDES    Surface speed design routine
+  .GDES    Geometry design routine
+
+   SAVE f  Write airfoil to labeled coordinate file
+   PSAV f  Write airfoil to plain coordinate file
+   ISAV f  Write airfoil to ISES coordinate file
+   MSAV f  Write airfoil to MSES coordinate file
+   REVE    Reverse written-airfoil node ordering
+
+   LOAD f  Read buffer airfoil from coordinate file
+   NACA i  Set NACA 4,5-digit airfoil and buffer airfoil
+   INTE    Set buffer airfoil by interpolating two airfoils
+   NORM    Buffer airfoil normalization toggle
+   XYCM rr Change CM reference location, currently  0.25000 0.00000
+
+   BEND    Display structural properties of current airfoil
+
+   PCOP    Set current-airfoil panel nodes directly from buffer airfoil points
+   PANE    Set current-airfoil panel nodes ( 160 ) based on curvature
+  .PPAR    Show/change paneling
+
+  .PLOP    Plotting options
+
+   WDEF f  Write  current-settings file
+   RDEF f  Reread current-settings file
+   NAME s  Specify new airfoil name
+   NINC    Increment name version number
+
+   Z       Zoom    | (available in all menus)
+   U       Unzoom  | 
+
+ XFOIL   c>  
+ Labeled airfoil file.  Name:  xfoil                                           
+
+ Number of input coordinate points: 201
+ Counterclockwise ordering
+ Max thickness =     0.110030  at x =   0.301
+ Max camber    =     0.018729  at x =   0.316
+
+  LE  x,y  =  -0.00012   0.00182  |   Chord =   1.00012
+  TE  x,y  =   1.00000   0.00000  |
+
+ Current airfoil nodes set from buffer airfoil nodes ( 201 )
+
+ XFOIL   c>  
+.OPERi   c>   Current iteration limit:          10
+
+Enter new iteration limit   i>  
+.OPERi   c>  
+ XFOIL   c>  
+ XFOIL   c>  
+ XFOIL   c>  
+.OPERi   c>  
+.OPERi   c>  
+ Sonic Cp =    -66.86      Sonic Q/Qinf =     9.138
+
+
+.OPERi   c>  
+ M  =    0.1000
+ Re =   1651160
+
+.OPERv   c>  
+ Polar  1 newly created for accumulation
+ Airfoil archived with polar: xfoil                                           
+
+Enter  polar save filename  OR  <return> for no file   s>  
+ Polar save file will NOT be written
+
+Enter  polar dump filename  OR  <return> for no file   s>  
+ Polar dump file will NOT be written
+
+ Polar accumulation enabled
+
+.OPERva   c>   Calculating unit vorticity distributions ...
+ Calculating wake trajectory ...
+ Calculating source influence matrix ...
+
+ Solving BL system ...
+
+ Initializing BL ...
+    side            1  ...
+ MRCHUE: Inverse mode at  52     Hk =   3.588
+ MRCHUE: Inverse mode at  53     Hk =   2.500
+ MRCHUE: Inverse mode at 100     Hk =   2.500
+ MRCHUE: Inverse mode at 101     Hk =   2.500
+    side            2  ...
+ MRCHUE: Inverse mode at 102     Hk =   2.500
+ MRCHUE: Inverse mode at 104     Hk =   2.496
+
+ Side 1  free  transition at x/c =  0.5133   52
+ Side 2  free  transition at x/c =  0.6096   60
+ idif Ue xi dudx           1  0.24394758      2.70867348E-03   90.061646    
+ Uenew xinew           2  1.32162431E-02  1.46746635E-04
+
+   1   rms: 0.1161E+00   max: -.8614E+00   D at  102  2   RLX: 0.580
+       a =  0.000      CL =  0.1998
+      Cm = -0.0365     CD =  0.00526   =>   CDf =  0.00465    CDp =  0.00061
+
+ Side 1  free  transition at x/c =  0.5311   52
+ Side 2  free  transition at x/c =  0.6032   60
+
+   2   rms: 0.6147E-01   max: -.6040E+00   D at  103  2   RLX: 0.828
+       a =  0.000      CL =  0.2049
+      Cm = -0.0378     CD =  0.00540   =>   CDf =  0.00463    CDp =  0.00077
+
+ Side 1  free  transition at x/c =  0.5511   54
+ Side 2  free  transition at x/c =  0.5946   60
+
+   3   rms: 0.6526E-01   max: -.1304E+01   C at   60  2   RLX: 0.383
+       a =  0.000      CL =  0.2110
+      Cm = -0.0393     CD =  0.00532   =>   CDf =  0.00457    CDp =  0.00075
+
+ Side 1  free  transition at x/c =  0.5499   54
+ Side 2  free  transition at x/c =  0.6015   60
+
+   4   rms: 0.3668E-01   max: -.7541E+00   C at   60  2   RLX: 0.663
+       a =  0.000      CL =  0.2185
+      Cm = -0.0411     CD =  0.00538   =>   CDf =  0.00454    CDp =  0.00085
+
+ Side 1  free  transition at x/c =  0.5470   54
+ Side 2  free  transition at x/c =  0.6087   60
+
+   5   rms: 0.1963E+00   max: 0.3877E+01   D at    2  1   RLX: 0.307
+       a =  0.000      CL =  0.2201
+      Cm = -0.0415     CD =  0.00541   =>   CDf =  0.00453    CDp =  0.00087
+
+ Side 1  free  transition at x/c =  0.5464   54
+ Side 2  free  transition at x/c =  0.6109   60
+
+   6   rms: 0.1128E-01   max: -.2117E+00   C at   60  2
+       a =  0.000      CL =  0.2234
+      Cm = -0.0422     CD =  0.00542   =>   CDf =  0.00453    CDp =  0.00089
+
+ Side 1  free  transition at x/c =  0.5449   54
+ Side 2  free  transition at x/c =  0.6156   60
+
+   7   rms: 0.9028E-03   max: -.2183E-01   C at   60  2
+       a =  0.000      CL =  0.2235
+      Cm = -0.0422     CD =  0.00542   =>   CDf =  0.00451    CDp =  0.00091
+
+ Side 1  free  transition at x/c =  0.5449   54
+ Side 2  free  transition at x/c =  0.6161   60
+
+   8   rms: 0.8776E-05   max: -.2092E-03   C at   60  2
+       a =  0.000      CL =  0.2235
+      Cm = -0.0422     CD =  0.00542   =>   CDf =  0.00451    CDp =  0.00091
+ plradd ia,ip,cpol            1         100  0.16644000    
+
+ Point added to stored polar  1
+ Save file unspecified or not available
+ Dump file unspecified or not available
+
+.OPERva   c>  
+.OPERva   c>  
+.OPERva   c>  
+        airfoil                    Re           Mach       Ncrit  XtripT  XtripB     file
+       ------------------------  ------------  ----------  -----  ------  ------    -------------------
+ >  1  xfoil                     1.651e6       0.100        9.00   1.000   1.000    
+
+Enter polar output filename   s>  
+ Output file exists.  Overwrite?  Y
+
+.OPERva   c>  
+ XFOIL   c>  

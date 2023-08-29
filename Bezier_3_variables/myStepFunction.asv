@@ -1,0 +1,77 @@
+function [NextObs,Reward,IsDone,LoggedSignals] = myStepFunction(Action,LoggedSignals)
+
+% Custom step function to construct airfoil environment.
+
+% This function applies the given action to the environment and evaluates
+% the system characteristics for one simulation step.
+
+% Define the environment constants.
+chord = 1; 
+alpha = 0; % angle of attack
+u = 22; % speed
+k = 1.4207e-5; %air kinematic viscosity
+Re = u*chord/k; % Reynolds number
+h = 0.01; % height in km
+t = h*6.5 + 15; % air temperature
+v = t*0.62 + 331; % speed of sound
+Mach = u/v; % Mach number
+p = 0.4;
+t = 0.12;
+
+Delta = Action;
+
+% Unpack the state vector from the logged signals.
+State = LoggedSignals.State;
+m = State + Delta;
+
+% Calculate new geometry.
+n = 120;
+HalfCosineSpacing = 1;
+is_finiteTE = 1;
+af = naca4gen(m,p,t,n,HalfCosineSpacing,is_finiteTE);
+
+coords = [af.x(1+1:120) af.z(1:120);af.x(122:end) af.z(122:end)];
+coords(:,1) = coords(:,1) + 0.0001 + abs(min(coords(:,1)));
+% Checks on Geometry
+intersections = selfintersect(coords(:,1),coords(:,2));
+check = isempty(intersections); % interesecting curves
+
+if ~check
+    Reward = -10000;
+    IsDone = 1;
+else
+
+% Xfoil analysis
+tic
+[pol,~] =xfoil(coords,alpha,Re,Mach);
+time = toc;
+warning1 = pol.warning;
+
+if warning1
+    Reward = -1000;
+    IsDone = 0;
+else
+
+CL = pol.CL;
+CD = pol.CD;
+ratio = CL/CD;
+
+% update state
+LoggedSignals.State = m;
+
+% Check terminal condition.
+IsDone = 0;
+if ratio > 80
+    Reward = 10*ratio-time^5;
+elseif ratio >50
+    Reward = ratio-time^5;
+else
+    Reward = -time^5;
+end
+end
+end
+
+% save observation.
+NextObs = LoggedSignals.State;
+
+end

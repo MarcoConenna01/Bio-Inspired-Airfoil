@@ -1,0 +1,177 @@
+
+ ===================================================
+  XFOIL Version 6.99
+  Copyright (C) 2000   Mark Drela, Harold Youngren
+
+  This software comes with ABSOLUTELY NO WARRANTY,
+    subject to the GNU General Public License.
+
+  Caveat computor
+ ===================================================
+
+ File  xfoil.def  not found
+
+   QUIT    Exit program
+
+  .OPER    Direct operating point(s)
+  .MDES    Complex mapping design routine
+  .QDES    Surface speed design routine
+  .GDES    Geometry design routine
+
+   SAVE f  Write airfoil to labeled coordinate file
+   PSAV f  Write airfoil to plain coordinate file
+   ISAV f  Write airfoil to ISES coordinate file
+   MSAV f  Write airfoil to MSES coordinate file
+   REVE    Reverse written-airfoil node ordering
+
+   LOAD f  Read buffer airfoil from coordinate file
+   NACA i  Set NACA 4,5-digit airfoil and buffer airfoil
+   INTE    Set buffer airfoil by interpolating two airfoils
+   NORM    Buffer airfoil normalization toggle
+   XYCM rr Change CM reference location, currently  0.25000 0.00000
+
+   BEND    Display structural properties of current airfoil
+
+   PCOP    Set current-airfoil panel nodes directly from buffer airfoil points
+   PANE    Set current-airfoil panel nodes ( 160 ) based on curvature
+  .PPAR    Show/change paneling
+
+  .PLOP    Plotting options
+
+   WDEF f  Write  current-settings file
+   RDEF f  Reread current-settings file
+   NAME s  Specify new airfoil name
+   NINC    Increment name version number
+
+   Z       Zoom    | (available in all menus)
+   U       Unzoom  | 
+
+ XFOIL   c>  
+ Labeled airfoil file.  Name:  xfoil                                           
+
+ Number of input coordinate points:  82
+ Counterclockwise ordering
+ Max thickness =     0.118570  at x =   0.287
+ Max camber    =     0.005498  at x =   0.437
+
+  LE  x,y  =   0.00015  -0.00000  |   Chord =   0.92202
+  TE  x,y  =   0.92217   0.00014  |
+
+ Current airfoil nodes set from buffer airfoil nodes (  82 )
+
+ XFOIL   c>  
+.OPERi   c>   Current iteration limit:          10
+
+Enter new iteration limit   i>  
+.OPERi   c>  
+ XFOIL   c>  
+ XFOIL   c>  
+ XFOIL   c>  
+.OPERi   c>  
+.OPERi   c>  
+ Sonic Cp =   -160.75      Sonic Q/Qinf =    14.128
+
+
+.OPERi   c>  
+ M  =    0.0646
+ Re =   1548530
+
+.OPERv   c>  
+ Polar  1 newly created for accumulation
+ Airfoil archived with polar: xfoil                                           
+
+Enter  polar save filename  OR  <return> for no file   s>  
+ Polar save file will NOT be written
+
+Enter  polar dump filename  OR  <return> for no file   s>  
+ Polar dump file will NOT be written
+
+ Polar accumulation enabled
+
+.OPERva   c>   Calculating unit vorticity distributions ...
+ Calculating wake trajectory ...
+ Calculating source influence matrix ...
+
+ Solving BL system ...
+
+ Initializing BL ...
+    side            1  ...
+ MRCHUE: Inverse mode at  29     Hk =   2.500
+    side            2  ...
+ MRCHUE: Inverse mode at  44     Hk =   1.705
+ MRCHUE: Inverse mode at  45     Hk =   1.658
+
+ Side 1  free  transition at x/c =  0.6298   29
+ Side 2  free  transition at x/c =  0.6106   29
+
+   1   rms: 0.1568E+00   max: -.8791E+00   D at   42  1   RLX: 0.569
+       a =  0.000      CL =  0.0787
+      Cm = -0.0151     CD =  0.00518   =>   CDf =  0.00401    CDp =  0.00117
+
+ Side 1  free  transition at x/c =  0.6455   30
+ Side 2  free  transition at x/c =  0.6420   29
+
+   2   rms: 0.7791E-01   max: 0.5661E+00   D at   46  2
+       a =  0.000      CL =  0.0761
+      Cm = -0.0146     CD =  0.00588   =>   CDf =  0.00396    CDp =  0.00192
+
+ Side 1  free  transition at x/c =  0.6773   31
+ Side 2  free  transition at x/c =  0.6621   30
+
+   3   rms: 0.1904E-01   max: 0.2089E+00   D at   46  2
+       a =  0.000      CL =  0.0745
+      Cm = -0.0143     CD =  0.00595   =>   CDf =  0.00382    CDp =  0.00213
+
+ Side 1  free  transition at x/c =  0.6731   30
+ Side 2  free  transition at x/c =  0.6576   30
+
+   4   rms: 0.2723E-02   max: 0.4771E-01   D at   46  2
+       a =  0.000      CL =  0.0746
+      Cm = -0.0143     CD =  0.00592   =>   CDf =  0.00383    CDp =  0.00209
+
+ Side 1  free  transition at x/c =  0.6735   30
+ Side 2  free  transition at x/c =  0.6576   30
+
+   5   rms: 0.2248E-03   max: 0.4046E-02   D at   46  2
+       a =  0.000      CL =  0.0746
+      Cm = -0.0143     CD =  0.00592   =>   CDf =  0.00383    CDp =  0.00209
+
+ Side 1  free  transition at x/c =  0.6735   30
+ Side 2  free  transition at x/c =  0.6576   30
+
+   6   rms: 0.8508E-06   max: -.8222E-05   C at   30  2
+       a =  0.000      CL =  0.0746
+      Cm = -0.0143     CD =  0.00592   =>   CDf =  0.00383    CDp =  0.00209
+ plradd ia,ip,cpol            1          41  0.11473000    
+
+ Point added to stored polar  1
+ Save file unspecified or not available
+ Dump file unspecified or not available
+
+.OPERva   c>  
+.OPERva   c>  
+.OPERva   c>  
+        airfoil                    Re           Mach       Ncrit  XtripT  XtripB     file
+       ------------------------  ------------  ----------  -----  ------  ------    -------------------
+ >  1  xfoil                     1.549e6       0.065        9.00   1.000   1.000    
+
+Enter polar output filename   s>  
+.OPERva   c>  
+ ==============================================================
+ Polar  1
+  
+       XFOIL         Version 6.99
+  
+ Calculated polar for: xfoil                                           
+  
+ 1 1 Reynolds number fixed          Mach number fixed         
+  
+ xtrf =   1.000 (top)        1.000 (bottom)  
+ Mach =   0.065     Re =     1.549 e 6     Ncrit =   9.000
+  
+   alpha    CL        CD       CDp       CM     Top_Xtr  Bot_Xtr
+  ------ -------- --------- --------- -------- -------- --------
+   0.000   0.0746   0.00592   0.00209  -0.0143   0.6735   0.6576
+
+.OPERva   c>  
+ XFOIL   c>  
