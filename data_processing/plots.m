@@ -123,7 +123,7 @@ ylim([0 inf])
 xlabel('Episode')
 ylabel('Cumulative Reward')
 
-%% Bezier 4-variables
+%% Bezier 4-variables (complex)
 
 figure(9)
 plot(Filtered_Reward_complex_Bezier,'LineWidth',2,'Color','#7c2f8e')
